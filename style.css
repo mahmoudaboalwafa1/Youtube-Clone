@@ -1,0 +1,273 @@
+/*==================== global rules ===============*/
+
+:root {
+  --bg-white: #f0f0f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*====================global rules===============*/
+
+/*==================== start header ===============*/
+
+section.content {
+  display: flex;
+}
+
+header {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px;
+  }
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+}
+
+.left-nav span {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 72px;
+}
+
+header img {
+  height: 20px;
+  width: 90px;
+}
+
+span {
+  color: black;
+}
+
+div.channel img,
+.no-active img {
+  width: 40px;
+}
+
+.mid-nav {
+  display: flex;
+  align-items: center;
+}
+
+.mid-nav form button {
+  font-size: 15px;
+  background-color: var(--bg-white);
+  border: 1px solid #d3d3d3;
+  height: 40;
+  width: 65px;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+}
+
+.mid-nav form button:hover {
+  border-color: #c6c6c6;
+  background-color: var(--bg-white);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
+}
+
+.mid-nav button span {
+  color: #0f0f0f;
+  font-weight: 300;
+}
+
+.mid-nav form {
+  display: flex;
+  width: 500px;
+}
+
+@media (max-width: 992px) {
+  .mid-nav form {
+    width: 300px;
+  }
+}
+
+.mid-nav input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 26px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  display: flex;
+}
+
+.right-nav {
+  display: flex;
+}
+
+.right-nav a {
+  margin: 0 6px;
+}
+
+#search {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mid-nav form,
+  #apps,
+  #mic,
+  #cast {
+    display: none;
+  }
+
+  #search {
+    display: block;
+  }
+}
+
+main {
+  display: flex;
+  gap: 20px;
+}
+
+aside {
+  width: 25%;
+}
+
+/*==================== Middle Section ===============*/
+
+main {
+  width: 100%;
+}
+
+.container-channel {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 0 30px;
+  padding-top: 40px;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-channel {
+    padding: 0 10px;
+    padding-top: 40px;
+  }
+}
+
+.im {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.channel img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.img-channel {
+  cursor: pointer;
+}
+
+.img-channel:hover img.im {
+  border-radius: 0;
+}
+
+.title-details {
+  display: flex;
+  flex-direction: column;
+}
+
+div.active,
+.no-active {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+}
+
+div.active,
+div.no-active:hover {
+  background-color: #f2f2f2;
+}
+
+div.no-active:nth-child(3),
+div.no-active:nth-child(12) {
+  border-bottom: 1px solid #e8e4e4;
+}
+
+aside .active img,
+div.no-active span:first-of-type {
+  margin-right: 10px;
+}
+
+.no-active img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+aside h2 {
+  padding-top: 13px;
+}
+
+@media (max-width: 768px) {
+  .no-active,
+  .active {
+    width: 100px;
+  }
+  .text-active {
+    display: none;
+  }
+
+  aside {
+    width: 50px;
+  }
+
+  .subscribion {
+    display: none;
+  }
+}
+
+div.subscribion .no-active {
+  display: flex;
+  align-items: center;
+}
+
+div.subscribion img {
+  margin-right: 10px;
+}
+/*==================== Middle Section ===============*/
